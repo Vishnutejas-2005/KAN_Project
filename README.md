@@ -124,6 +124,54 @@ This project includes Jupyter Notebooks demonstrating:
 
 ---
 
+### `main.ipynb`
+- **Goal**: Demonstrates KAN architecture on simple function approximations.
+- **Key Points**:
+  - Fits functions like `sin(x)`, `x^2 + sin(x)`
+  - Shows how KANs achieve low error with fewer parameters compared to MLPs
+
+---
+
+### `f_9.ipynb`
+- **Function**: \( f(x, y) = \exp(x + y^2) \)
+- **Experiment**:
+  - Tests symbolic learnability and generalization.
+  - Compares KAN's ability to recover exponential forms and contrast against MLP behavior.
+
+---
+
+### `f_10.ipynb`
+- **Function**: \( f(x_1, x_2, x_3, x_4, x_5) = \exp\left(\frac{1}{5} \sum_{i=1}^5 \sin^2\left(\frac{\pi x_i}{2}\right)\right) \)
+- **Experiment**:
+  - Tests high-dimensional symbolic composition (5D input).
+  - Visualizes functional branches and spline-based recovery.
+
+---
+
+### `f_11.ipynb`
+- **Function**: \( f(x, y) = x\left(\frac{1}{y} - 1\right) \)
+- **Experiment**:
+  - Benchmarks sharp rational expressions.
+  - Examines how accurately KANs can recover singularities or sharp gradients.
+
+---
+
+### `KAN_Report.pdf`
+- **Comprehensive project report** containing:
+  - Theoretical foundations of KANs (Kolmogorov–Arnold representation theorem)
+  - Experimental design and analysis
+  - Comparison with MLPs across tasks
+  - Graphs and visualizations of learned functions
+  - Interpretability and scaling law insights
+- **Highlights**:
+  - KANs outperform MLPs in interpretability and parameter efficiency.
+  - MLPs are faster to train and perform better on high-dimensional, non-symbolic datasets (e.g. MNIST).
+  - Symbolic recovery using KANs is demonstrated across several complex expressions.
+
+---
+
+---
+
 ## 📌 Summary of Results
 
 | Feature                     | KAN                            | MLP                            |
