@@ -182,6 +182,14 @@ This project includes Jupyter Notebooks demonstrating:
 | Continual Learning          | ✅ Less forgetting              | ❌ Performance degradation     |
 | Symbolic Function Recovery  | ✅ With `auto_symbolic()`       | ❌ Not applicable              |
 | Training Time (for small models) | ⚠️ Slightly slower due to functional kernels | ✅ Faster, fewer ops |
+| Parameter Efficiency        | ✅ Fewer parameters needed     | ❌ Requires larger models       |
+| Interpretability            | ✅ Symbolic regression possible| ❌ Black-box behavior           |
+| High-Dimensional Scaling    | ✅ Handles 100D inputs          | ⚠️ Slower convergence           |
+| Continual Learning          | ✅ Less catastrophic forgetting | ❌ Prone to forgetting          |
+| Symbolic Function Recovery  | ✅ `auto_symbolic()` supported | ❌ Not applicable               |
+| Training Time (small models)| ⚠️ Slower due to splines       | ✅ Faster                       |
+| Oscillatory Function Fitting| ✅ Bessel/trig functions handled| ⚠️ Requires deeper tuning       |
+| Singularities/Sharp Features| ✅ f₁₁-style rational terms fit | ⚠️ Less stable near singularities |
 
 ---
 # 🧠 MNIST_program – KAN vs. MLP on Digit Classification
