@@ -385,3 +385,54 @@ This folder contains a series of Jupyter notebooks focused on evaluating and dem
 - This folder is **independent** from the main repository that handles symbolic regression and function approximation. It specifically focuses on **symbolic recovery** using Kolmogorov-Arnold Networks (KANs), evaluating whether KANs can learn and extract interpretable **closed-form expressions** from data. These notebooks serve as unit tests for KAN's symbolic capabilities across a variety of analytic functions.
 ---
 
+# 📈 Neural_scaling_laws – KAN vs. MLP Scaling Experiments
+
+This folder is part of the broader [KAN_Project](https://github.com/Vishnutejas-2005/KAN_Project) and contains experiments that analyze how **Kolmogorov–Arnold Networks (KANs)** and **Multi-Layer Perceptrons (MLPs)** scale on symbolic regression tasks. The focus here is on understanding how these architectures behave as we vary model depth, hidden width, and dimensionality.
+
+---
+
+## 📘 Notebook Summaries
+
+### `f_1.ipynb`
+- **Function**: Symbolic/Feynman-style expressions
+- **Focus**: Baseline experiments comparing KAN vs. MLP across multiple functions
+- **Includes**: Loss comparisons, visualization, and symbolic accuracy metrics
+
+---
+
+### `f_2.ipynb`
+- **Function**: \( f(x, y) = x^2 + y^2 \)
+- **Focus**: Study of performance as hidden width scales
+- **Goal**: Determine how each model handles a smooth convex function as capacity grows
+
+---
+
+### `f_3.ipynb`
+- **Function**: \( f(x, y) = x \cdot y \)
+- **Focus**: Symbolic regression of multiplicative functions
+- **Goal**: Examine differences in learned internal structure
+
+---
+
+### `f_4.ipynb`
+- **Function**: \( f(x_0, ..., x_{99}) = \sum \sin^2(x_i) \)
+- **Focus**: High-dimensional symbolic regression (100D)
+- **Goal**: Assess scalability and generalization in complex spaces
+
+---
+
+### `f_5.ipynb`
+- **Function**: \( \sin(x_0 + x_1) + \exp(x_2^2 + x_3^2) \)
+- **Focus**: Symbolic modeling in compositional 4D space
+- **Goal**: Test KANs and MLPs on functions with distinct nonlinear patterns
+
+## 📋 Summary
+
+| Notebook     | Function Tested                                   | Dimensionality | Focus                            | Notes                                      |
+|--------------|----------------------------------------------------|----------------|-----------------------------------|--------------------------------------------|
+| `f_1.ipynb`  | Multiple symbolic functions                        | 1–2D           | General symbolic regression       | Baseline comparison of KAN vs. MLP         |
+| `f_2.ipynb`  | \( f(x, y) = x^2 + y^2 \)                         | 2D             | Width scaling                     | Smooth convex function                     |
+| `f_3.ipynb`  | \( f(x, y) = x \cdot y \)                         | 2D             | Product modeling                  | Analyzes learned internal structure        |
+| `f_4.ipynb`  | \( f(x_0, ..., x_{99}) = \sum \sin^2(x_i) \)      | 100D           | High-dimensional performance      | Generalization and scalability test        |
+| `f_5.ipynb`  | \( \sin(x_0 + x_1) + \exp(x_2^2 + x_3^2) \)       | 4D             | Compositional symbolic modeling   | Multiple functional patterns               |
+
