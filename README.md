@@ -381,8 +381,6 @@ This folder contains a series of Jupyter notebooks focused on evaluating and dem
 
 ---
 
-## 📂 Folder Role in Project
-
-This folder complements the main KAN experiments by demonstrating the **interpretability** edge of KANs—recovering concise symbolic formulas from data, an area where MLPs typically fail.
-
+## 📂 Folder Structure
+This folder is independent from the main repository that handles symbolic regression and function approximation. It specifically focuses on **symbolic recovery** using Kolmogorov–Arnold Networks (KANs), evaluating whether KANs can learn and extract interpretable **closed-form expressions** from data. These notebooks serve as unit tests for KAN's symbolic capabilities across a variety of analytic functions.
 ---
