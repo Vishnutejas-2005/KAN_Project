@@ -34,8 +34,8 @@ This project includes Jupyter Notebooks demonstrating:
 ### `Interpretability.ipynb`
 - **Goal**: Recovers symbolic expressions from learned KAN functions.
 - **Function Examples**:
-  - $\( f(x) = x^2 + \sin(x) \)$
-  - $\( f(x, y) = \exp(\sin(\pi x) + y^2) \)$
+  - $f(x) = x^2 + \sin(x)$
+  - $f(x, y) = \exp(\sin(\pi x) + y^2)$
 - **Highlight**:
   - Uses `auto_symbolic()` to produce human-readable formulas.
   - Demonstrates true interpretability of the KAN structure.
@@ -81,7 +81,7 @@ This project includes Jupyter Notebooks demonstrating:
 
 ### `f_2.ipynb`
 - Studies performance as hidden width increases.
-- Default function: \( f_2(x, y) = x^2 + y^2 \)
+- Default function: $f_2(x, y) = x^2 + y^2$
 - Observes parameter efficiency with increasing complexity.
 
 ---
