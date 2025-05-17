@@ -273,8 +273,7 @@ A PCA-reduced version of the MNIST dataset (100-dimensional input features) is u
 ---
 
 ## 📂 Folder Structure
-
-This folder is **independent** from the main repository that handles symbolic regression and function approximation. It specifically focuses on MNIST digit classification under varied network architectures.
+- This folder is **independent** from the main repository that handles symbolic regression and function approximation. It specifically focuses on MNIST digit classification under varied network architectures.
 
 ---
 
