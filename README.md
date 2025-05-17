@@ -277,3 +277,112 @@ A PCA-reduced version of the MNIST dataset (100-dimensional input features) is u
 This folder is **independent** from the main repository that handles symbolic regression and function approximation. It specifically focuses on MNIST digit classification under varied network architectures.
 
 ---
+
+# 🧩 Interpretability – Symbolic Recovery with Kolmogorov–Arnold Networks (KANs)
+
+This folder contains a series of Jupyter notebooks focused on evaluating and demonstrating the **interpretability** of Kolmogorov–Arnold Networks (KANs) through **symbolic recovery** of learned functions. The goal is to test whether KANs can reconstruct human-readable symbolic expressions from training data, highlighting their unique capability in **symbolic regression**.
+
+---
+
+## 📘 Notebook Descriptions
+
+### `f_3.ipynb`
+- **Function**: \( f(x, y) = x \cdot y \)
+- **Goal**: Benchmark the performance of KAN vs MLP in fitting multiplicative interactions.
+- **Highlight**: Tests a basic multiplicative symbolic function and evaluates symbolic recovery.
+
+---
+
+### `f_6.ipynb`
+- **Function**: \( f(x, y) = \exp(J_0(20x) + y^2) \), where \( J_0 \) is the Bessel function of the first kind.
+- **Goal**: Examine how KAN handles complex oscillatory functions.
+- **Highlight**: Tests symbolic regression involving special functions (Bessel).
+
+---
+
+### `f_7.ipynb`
+- **Function**: \( f(x, y) = \sqrt{1 + x^2 + y^2} \)
+- **Goal**: Test model's ability to capture radial symmetry.
+- **Highlight**: KAN's symbolic recovery is benchmarked against the ground truth.
+
+---
+
+### `f_8.ipynb`
+- **Function**: \( f(x, y) = \exp(\sin(\pi x) + y^2) \)
+- **Goal**: Recover symbolic expressions and validate by retraining on recovered formula.
+- **Highlight**: Achieves **zero validation loss** after symbolic recovery, demonstrating perfect generalization.
+
+---
+
+### `f_9.ipynb`
+- **Function**: \( f(x, y) = \exp(x + y^2) \)
+- **Goal**: Benchmark symbolic learnability of exponential + quadratic expressions.
+- **Highlight**: Assesses KAN's ability to extract concise exponential forms.
+
+---
+
+### `f_10.ipynb`
+- **Function**: \( f(x_1, ..., x_5) = \exp\left(\frac{1}{5} \sum_{i=1}^5 \sin^2\left(\frac{\pi x_i}{2}\right)\right) \)
+- **Goal**: Recover high-dimensional symbolic structure.
+- **Highlight**: Tests spline smoothness and symbolic recovery in 5D inputs.
+
+---
+
+### `f_11.ipynb`
+- **Function**: \( f(x, y) = x \left(\frac{1}{y} - 1\right) \)
+- **Goal**: Evaluate symbolic fitting in the presence of sharp singularities.
+- **Highlight**: Focuses on rational expressions and regions of instability.
+
+---
+
+### `Fey_and_Interp5.ipynb`
+- **Function**: Combination of symbolic and Feynman-inspired expressions.
+- **Goal**: Test symbolic recovery under mixed functional inputs.
+- **Highlight**: Intermediate-level symbolic regression with compound formulas.
+
+---
+
+### `Fey_and_Interp11.ipynb`
+- **Function**: Advanced symbolic Feynman-style equation.
+- **Goal**: Evaluate symbolic generalization for more complex physics-based formulas.
+- **Highlight**: Tests KAN's symbolic kernel recovery on dense, nonlinear forms.
+
+---
+
+### `Fey_and_Interp12.ipynb`
+- **Function**: Unknown (Feynman-inspired test).
+- **Goal**: Test symbolic learning on physics equations from Feynman dataset.
+- **Highlight**: Uses learned spline representations to reverse-engineer expression.
+
+---
+
+## 🧠 Key Techniques
+
+- **Symbolic Regression**: Using `auto_symbolic()` to extract closed-form expressions.
+- **Spline-Based Learning**: KANs use spline-parameterized functions to model univariate transforms.
+- **Generalization Analysis**: Validation on symbolic accuracy, not just numerical fit.
+
+---
+
+## 📝 Summary
+
+| Notebook              | Function Type                            | Symbolic Recovery | Dimensionality | Notes                                 |
+|-----------------------|------------------------------------------|-------------------|----------------|----------------------------------------|
+| `f_3`                 | Multiplicative \( x \cdot y \)           | ✅                | 2D             | Basic bilinear test                    |
+| `f_6`                 | Bessel + quadratic                       | ✅                | 2D             | Oscillatory special function           |
+| `f_7`                 | Radial square root                       | ✅                | 2D             | Tests smooth, symmetric function       |
+| `f_8`                 | Exponential of sinusoid + quadratic      | ✅                | 2D             | Perfect recovery post-training         |
+| `f_9`                 | Exponential sum                          | ✅                | 2D             | Symbolic learnability test             |
+| `f_10`                | 5D periodic composition                  | ✅                | 5D             | High-dimensional symbolic benchmark    |
+| `f_11`                | Rational function                        | ⚠️ Partial        | 2D             | Tests singularity handling             |
+| `Fey_and_Interp5`     | Mixed symbolic                           | ✅                | Variable       | Compound formula, symbolic generalization |
+| `Fey_and_Interp11`    | Complex Feynman-style                    | ⚠️ Advanced       | Variable       | Deep symbolic patterns                 |
+| `Fey_and_Interp12`    | Feynman-based (unknown)                  | ⚠️ Advanced       | Variable       | Symbolic extraction focus              |
+
+---
+
+## 📂 Folder Role in Project
+
+This folder complements the main KAN experiments by demonstrating the **interpretability** edge of KANs—recovering concise symbolic formulas from data, an area where MLPs typically fail.
+
+---
