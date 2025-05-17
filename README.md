@@ -34,8 +34,8 @@ This project includes Jupyter Notebooks demonstrating:
 ### `Interpretability.ipynb`
 - **Goal**: Recovers symbolic expressions from learned KAN functions.
 - **Function Examples**:
-  - \( f(x) = x^2 + \sin(x) \)
-  - \( f(x, y) = \exp(\sin(\pi x) + y^2) \)
+  - $\( f(x) = x^2 + \sin(x) \)$
+  - $\( f(x, y) = \exp(\sin(\pi x) + y^2) \)$
 - **Highlight**:
   - Uses `auto_symbolic()` to produce human-readable formulas.
   - Demonstrates true interpretability of the KAN structure.
@@ -59,7 +59,7 @@ This project includes Jupyter Notebooks demonstrating:
 
 ---
 
-### `Cataastrophic_forgetting(1).ipynb`
+### `Catastrophic_forgetting(1).ipynb`
 - **Goal**: Evaluate KANs in continual learning settings.
 - **Setup**:
   - Sequentially learn functions like `x^2`, `sin(x)`, and `exp(x)`.
