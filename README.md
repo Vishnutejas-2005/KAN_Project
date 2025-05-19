@@ -7,39 +7,6 @@ This repository presents a series of experiments using **Kolmogorov–Arnold Net
 - Symbolic regression capabilities
 - Robustness in continual learning
 
-KAN_Project/
-│
-├── main.ipynb
-├── KAN_Report.pdf
-├── README.md
-│
-├── Interpretability/          <- Symbolic recovery and interpretability experiments
-│   ├── f_3.ipynb
-│   ├── f_6.ipynb
-│   ├── f_7.ipynb
-│   ├── f_8.ipynb
-│   ├── f_9.ipynb
-│   ├── f_10.ipynb
-│   ├── f_11.ipynb
-│   ├── Fey_and_Interp5.ipynb
-│   ├── Fey_and_Interp11.ipynb
-│   └── Fey_and_Interp12.ipynb
-│
-├── MNIST_program/             <- MNIST classification with KANs and MLPs
-│   ├── main.ipynb
-│   ├── main copy.ipynb
-│   ├── main copy 2.ipynb
-│   ├── main copy 3.ipynb
-│   ├── main copy 4.ipynb
-│
-└── Neural_scaling_laws/       <- Neural scaling experiments for KANs and MLPs
-    ├── f_1.ipynb
-    ├── f_2.ipynb
-    ├── f_3.ipynb
-    ├── f_4.ipynb
-    ├── f_5.ipynb
-
-
 ---
 
 ## 📁 Repository Contents
